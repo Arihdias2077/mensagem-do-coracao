@@ -2,43 +2,150 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uma Mensagem do Meu Coração</title>
+
 <style>
-body{margin:0;background:#ffe6f0;font-family:Arial;text-align:center;color:#7a1748}
-main{max-width:500px;margin:auto;padding:25px 18px}
-h1{font-size:28px}
-.heart{width:220px;height:200px;margin:50px auto;position:relative;cursor:pointer;animation:pulse 1s infinite}
-.heart:before,.heart:after{content:"";position:absolute;top:0;width:120px;height:190px;background:#e60035;border-radius:120px 120px 0 0}
-.heart:before{left:110px;transform:rotate(45deg);transform-origin:0 100%}
-.heart:after{left:0;transform:rotate(-45deg);transform-origin:100% 100%}
-.heart span{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);color:white;font-size:20px;font-weight:bold;width:180px}
-@keyframes pulse{50%{transform:scale(1.08)}}
-#msg{display:none;background:white;border-radius:20px;padding:22px;font-size:18px;line-height:1.6}
+body{
+    margin:0;
+    background:#ffe6f0;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    color:#7a1748;
+}
+
+main{
+    max-width:500px;
+    margin:auto;
+    padding:25px 18px;
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.foto{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    margin:12px auto;
+    display:block;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.heart{
+    width:220px;
+    height:200px;
+    margin:45px auto;
+    position:relative;
+    cursor:pointer;
+    animation:pulse 1s infinite;
+}
+
+.heart:before,
+.heart:after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:120px;
+    height:190px;
+    background:#e60035;
+    border-radius:120px 120px 0 0;
+}
+
+.heart:before{
+    left:110px;
+    transform:rotate(45deg);
+    transform-origin:0 100%;
+}
+
+.heart:after{
+    left:0;
+    transform:rotate(-45deg);
+    transform-origin:100% 100%;
+}
+
+.heart span{
+    position:absolute;
+    z-index:2;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    width:180px;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+#mensagem{
+    display:none;
+    background:white;
+    border-radius:20px;
+    padding:22px;
+    font-size:18px;
+    line-height:1.6;
+    margin-top:20px;
+}
+
 </style>
 </head>
+
 <body>
+
 <main>
+
 <h1>Uma Mensagem do Meu Coração</h1>
+
+<img class="foto" src="IMG_20260802_220552039_RETRATO.jpg">
+
+<img class="foto" src="IMG_20260802_214115197.jpg">
 
 <div class="heart" onclick="abrir()">
 <span>ABERTA AQUI</span>
 </div>
 
-<div id="msg">
-Gatinho, quero que você saiba que pode contar sempre comigo.<br><br>
-Estarei ao seu lado nos momentos bons e também nos momentos difíceis.<br><br>
-<strong>Eu amo você!</strong><br><br>
-Não importa o que aconteça, quero estar ao seu lado.<br><br>
-Você é muito especial para mim.
+<div id="mensagem">
+
+Gatinho, quero que você saiba que pode contar sempre comigo. ❤️
+
+<br><br>
+
+Estarei ao seu lado nos momentos bons e também nos momentos difíceis.
+
+<br><br>
+
+<strong>Eu amo você! </strong>
+
+<br><br>
+
+Não importa o que aconteça, quero estar ao seu lado.
+
+<br><br>
+
+Você é muito especial para mim. 
+
 </div>
+
 </main>
 
 <script>
+
 function abrir(){
+
 document.querySelector(".heart").style.display="none";
-document.getElementById("msg").style.display="block";
+
+document.getElementById("mensagem").style.display="block";
+
 }
+
 </script>
+
 </body>
 </html>
